@@ -1,6 +1,7 @@
 # Temp files and IDE files
 *.*#
 .vscode
+.dobi
 .idea
 .vscode
 *.iml

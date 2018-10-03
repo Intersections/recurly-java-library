@@ -1,0 +1,33 @@
+meta:
+  project:      recurly-java-library
+  default:      mvn-build
+
+image=build-image:
+  image:        maven
+  tags:         [ '3' ]
+  pull:         always
+  description:  'Image capable of running the build for recurly-java-library'
+
+mount=kitchen-sink:
+  bind:         .
+  path:         /opt/recurly-java-library
+  description:  'Mount for the entire directory'
+
+mount=mvn-settings:
+  bind:         settings.xml
+  path:         /usr/share/maven/conf/settings.xml
+  description:  'Mount for maven settings'
+
+job=mvn-build:
+  use:          build-image
+  mounts:       [ kitchen-sink ]
+  working-dir:  /opt/recurly-java-library
+  command:      mvn clean test
+  description:  'Performs the build for recurly-java-library'
+
+job=mvn-deploy:
+  use:          build-image
+  mounts:       [ kitchen-sink, mvn-settings ]
+  working-dir:  /opt/recurly-java-library
+  command:      mvn clean deploy
+  description:  'Performs the build and deploy for recurly-java-library'

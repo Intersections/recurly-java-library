@@ -25,11 +25,25 @@
     <groupId>com.ning.billing</groupId>
     <artifactId>recurly-java-library</artifactId>
     <packaging>jar</packaging>
-    <version>0.19.1-SNAPSHOT</version>
+    <version>0.19.1-INTERSECTIONS-SNAPSHOT</version>
     <name>Recurly Java library</name>
     <description>Java library for Recurly</description>
     <url>http://github.com/killbilling/recurly-java-library</url>
     <inceptionYear>2012</inceptionYear>
+
+    <distributionManagement>
+        <repository>
+            <id>artifactory</id>
+            <name>privacynow-releases</name>
+            <url>https://privacynow.artifactoryonline.com/privacynow/libs-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>artifactory</id>
+            <name>privacynow-snapshots</name>
+            <url>https://privacynow.artifactoryonline.com/privacynow/libs-snapshots-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <licenses>
         <license>
             <name>Apache License 2.0</name>
