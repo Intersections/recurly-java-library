@@ -243,6 +243,7 @@
                             <useEclipseDefaultExcludes>true</useEclipseDefaultExcludes>
                             <useIdeaDefaultExcludes>true</useIdeaDefaultExcludes>
                             <useMavenDefaultExcludes>true</useMavenDefaultExcludes>
+                            <numUnapprovedLicenses>2</numUnapprovedLicenses>
                             <excludes>
                                 <!-- For some reason, useIdeaDefaultExcludes
                                     doesn't pick up .idea directory -->
